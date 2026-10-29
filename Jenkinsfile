@@ -15,7 +15,7 @@ pipeline {
 
         stage('creating the custom image from the running container') {
             steps {
-                bat 'docker container commit $(docker container ps -q) custom_image'
+               bat 'for /f %i in (\'docker container ps -q\') do docker container commit %i custom_image'
             }
         }
     }
