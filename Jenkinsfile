@@ -1,5 +1,9 @@
 pipeline {
     agent any
+	
+    environment {
+        PATH = "C:\\Users\\Gopal Sabale\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin;${env.PATH}"
+    }
 
     stages {
         stage('check the running container id') {
