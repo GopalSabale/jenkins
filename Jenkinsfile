@@ -57,7 +57,7 @@ pipeline {
         stage('push docker image') {
             steps {
                 bat '''
-                 docker image push %ECR_URL%/%ECR_REPO%:v1 
+                 docker image push %ECR_URL%/%ECR_REPO%:v2
                 '''
             }
         }
