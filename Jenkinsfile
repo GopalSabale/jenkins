@@ -49,15 +49,15 @@ pipeline {
         }
         stage('tag docker image') {
             steps{
-                '''
-                bat docker tag custom_image_2:latest %ECR_URL%/%ECR_REPO%:v2
+                 bat '''
+                docker tag custom_image_2:latest %ECR_URL%/%ECR_REPO%:v2
                 '''
             }
         }
         stage('push docker image') {
             steps {
-                '''
-                docker image push %ECR_URL%/%ECR_REPO%:v1 
+                bat '''
+                 docker image push %ECR_URL%/%ECR_REPO%:v1 
                 '''
             }
         }
