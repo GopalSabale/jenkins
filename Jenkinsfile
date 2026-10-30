@@ -26,7 +26,7 @@ pipeline {
             steps {
                 bat '''
                 for /f %%i in ('docker container ps -q') do (
-                    docker container commit %%i custom_image_1
+                    docker container commit %%i custom_image_2
                 )
                 '''
             }
